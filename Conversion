@@ -1,0 +1,27 @@
+//To convert minutes into years and days
+import java.io.*;
+class Conversion
+{
+	public static void main(String[] args)	throws IOException
+	{
+		BufferedReader obj = new BufferedReader( new InputStreamReader(System.in));
+		double min;
+		double year;
+		double days;
+		double D;
+		double A;
+		double B;
+		double b;
+		double C;
+		double c;
+		System.out.println("Input the number of minutes");
+		min = Double.parseDouble(obj.readLine());
+		D = min/60;	//converts minutes into hours
+		A = D/24;   	//converts hours into days
+		B =  A/365;	//converts days into years
+		b = Math.floor(B);   //converts years into nearest lowest integer    
+		C = A%365;	//gives remaining days of converted years
+		c = Math.floor(C);    // converts days to narest lowest integer
+		System.out.println(+min+" minutes is approximately "+b+" years and "+c+" days");
+	}
+}
