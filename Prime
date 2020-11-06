@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Prime
+{
+	public static void main(String[] args)
+	{
+		int num;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Please insert any number :");
+		num = s.nextInt();
+		int c = 0;			//here, c is the number of factors
+		for(int i = 1; i <= num; i++)
+		{
+			if(num%i == 0)
+			{
+				c++;		//c is increased accordingly if there is a factor of a given number or not (other than 1 and the number itself)
+			}
+		}
+		if(c==2)				//if c = 2 (the number has only two factor i.e., 1 and the number itself) then it is a prime number
+		{
+			System.out.println(num+" is a prime number");
+		}
+		else
+			System.out.println(num+" is not a prime number");
+	}
+}
