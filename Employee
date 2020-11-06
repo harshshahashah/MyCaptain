@@ -1,0 +1,49 @@
+class Input
+{
+	void input(String name, double year, String address)
+	{
+		System.out.println(name+" \t "+year+" \t		"+address);
+	}
+}
+
+class Employee
+{
+	public static void main(String[] args)	throws IOException
+	{
+		BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+		String name1;
+		String address1;
+		double year1;
+		String name2;
+		String address2;
+		double year2;
+		String name3;
+		String address3;
+		double year3;
+		System.out.println("Enter the name of first Employee :");
+		name1 = obj.readLine();
+		System.out.println("Enter the Year of Joining of first Employee :");
+		year1 = Double.parseDouble(obj.readLine());
+		System.out.println("Enter the Address of first Employee :");
+		address1 = obj.readLine();
+		System.out.println("Enter the name of second Employee :");
+		name2 = obj.readLine();
+		System.out.println("Enter the Year of Joining of second Employee :");
+		year2 = Double.parseDouble(obj.readLine());
+		System.out.println("Enter the Address of second Employee :");
+		address2 = obj.readLine();
+		System.out.println("Enter the name of third Employee :");
+		name3 = obj.readLine();
+		System.out.println("Enter the Year of Joining of third Employee :");
+		year3 = Double.parseDouble(obj.readLine());
+		System.out.println("Enter the Address of third Employee :");
+		address3 = obj.readLine();
+		Input obj1 = new Input();
+		Input obj2 = new Input();
+		Input obj3 = new Input();
+		System.out.println("Name \t Year of Joining \t Address");
+		obj1.input(name1, year1, address1);
+		obj2.input(name2, year2, address2);
+		obj3.input(name3, year3, address3);	
+	}
+}
